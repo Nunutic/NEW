@@ -1,5 +1,3 @@
-import org.omg.CORBA.Object;
-
 import java.util.*;
 
 /**
@@ -8,8 +6,11 @@ import java.util.*;
 public class WhatCanEnum {
     public static void main(String[] args){
 
-        // enum has 2 methods: valueOf and values
-        System.out.println(SEASONS.valueOf("AUTUMN"));
+        // enum has methods: valueOf and values + ordinal and name
+
+        System.out.println(SEASONS.AUTUMN.ordinal() + SEASONS.AUTUMN.name());
+
+        System.out.println(SEASONS.valueOf("SUMMER"));
 
         SEASONS[] list = SEASONS.values();
 
@@ -18,10 +19,12 @@ public class WhatCanEnum {
             System.out.println(list[i]);
         }
 
-        TreeSet<SEASONS[]> set = new TreeSet<>();
+        // as it implements Comparable, it can be stored in sorted collections (SortedSet, TreeSet, TreeMap)
 
-        set.add(SEASONS.values());
+        TreeSet<SEASONS> set = new TreeSet<>();
 
-        //let's adjust it
+        set.add(SEASONS.AUTUMN);
+
+
     }
 }
