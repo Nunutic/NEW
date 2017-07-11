@@ -22,6 +22,6 @@ public class WhatCanEnum {
 
         set.add(SEASONS.values());
 
-        //good! adda
+        //let's adjust it
     }
 }
