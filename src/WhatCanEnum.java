@@ -1,4 +1,6 @@
-import java.util.ArrayList;
+import org.omg.CORBA.Object;
+
+import java.util.*;
 
 /**
  * Created by anna on 2017.07.11..
@@ -15,5 +17,10 @@ public class WhatCanEnum {
         {
             System.out.println(list[i]);
         }
+
+        TreeSet<SEASONS[]> set = new TreeSet<>();
+
+        set.add(SEASONS.values());
+
     }
 }
